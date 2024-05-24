@@ -1,0 +1,19 @@
+<mat-card-header>
+  <mat-card-subtitle>
+    <div [ngClass]="'study-card-subtitle'" [ngStyle]="{ color: statusIcon.color }">
+      <mat-icon
+        aria-hidden="false"
+        aria-label="Status icon"
+        fontIcon="{{ statusIcon.icon }}"
+      ></mat-icon>
+      <span [ngClass]="'study-card-status'">
+        {{ status.replaceAll('_', ' ') }}
+      </span>
+    </div>
+  </mat-card-subtitle>
+  <mat-card-title>
+    <span>
+      {{ title }}
+    </span>
+  </mat-card-title>
+</mat-card-header>

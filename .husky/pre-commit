@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+stagedFiles=$(git diff --diff-filter=d --cached --name-only);
+  if [ -n "$stagedFiles" ]; then
+    {
+      echo "$stagedFiles" | xargs npx prettier --ignore-unknown --write
+      echo "$stagedFiles" | xargs git add
+      npx eslint $stagedFiles --quiet
+    }
+  fi

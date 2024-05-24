@@ -1,0 +1,13 @@
+.study-card-content p {
+  font-size: 15px;
+}
+
+.content-container {
+  display: flex;
+  align-items: center;
+  font-size: medium;
+
+  :nth-child(2) {
+    padding-left: 0.3em;
+  }
+}

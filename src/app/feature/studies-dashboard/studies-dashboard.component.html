@@ -1,0 +1,31 @@
+<div [ngClass]="'studies-container'">
+  @if (studies().length) {
+    <div [ngClass]="'title-container'">
+      <h1>Dashboard of Clinical Trials</h1>
+      <p>
+        <em>
+          For detailed information on all studies please go to:
+          <a
+            data-cy="trials-link"
+            mat-button
+            target="_blank"
+            color="primary"
+            [attr.href]="trialsURL"
+          >
+            <em>
+              {{ trialsURL }}
+            </em>
+          </a>
+        </em>
+      </p>
+    </div>
+    @for (study of studies(); track study.id) {
+      <app-study-card [study]="study" @myInsertRemoveTrigger1 />
+    }
+  } @else {
+    <div [ngClass]="'title-container'">
+      <label for="spinner" [ngClass]="'loading-label'"> Loading recent trials </label>
+      <mat-spinner id="spinner"></mat-spinner>
+    </div>
+  }
+</div>

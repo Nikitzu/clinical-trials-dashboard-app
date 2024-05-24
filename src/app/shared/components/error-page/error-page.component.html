@@ -1,0 +1,19 @@
+<div [ngClass]="'error-page'">
+  <div [ngClass]="'error-page-container'">
+    <div [ngClass]="'error-page-container-text'">
+      @if (currentUrl === '/404') {
+        <h1>404</h1>
+        <h2>We are sorry! This Page Could Not Be Found</h2>
+      } @else if (currentUrl === '/500') {
+        <h1>500</h1>
+        <h2>We are sorry! Our server faced some issues. Try again later.</h2>
+      } @else {
+        <h1>0 ideas</h1>
+        <h2>We are sorry, but we do not know this URL. Please try to change it.</h2>
+      }
+      <button mat-flat-button color="primary" routerLink="/" aria-label="Home button">
+        Go Home
+      </button>
+    </div>
+  </div>
+</div>

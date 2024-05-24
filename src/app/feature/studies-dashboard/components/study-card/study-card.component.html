@@ -1,0 +1,14 @@
+<mat-card [ngClass]="'study-card'">
+  <app-study-card-header
+    [status]="study.status"
+    [statusIcon]="study.statusIcon"
+    [title]="study.title"
+  />
+  <app-study-card-content
+    [location]="study.location"
+    [locationsAmount]="study.locationsAmount"
+    [conditions]="study.conditions"
+    [url]="study.url"
+  />
+  <app-study-card-actions [url]="study.url" />
+</mat-card>

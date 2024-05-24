@@ -1,0 +1,10 @@
+<mat-card-actions [ngClass]="'action-buttons'">
+  <a data-cy="open-study-link" mat-flat-button href="{{ url }}" target="_blank">
+    <mat-icon> open_in_new </mat-icon>
+    Open
+  </a>
+  <button data-cy="copy-study-link" mat-flat-button (click)="copyLink()">
+    <mat-icon> share </mat-icon>
+    Copy Link
+  </button>
+</mat-card-actions>

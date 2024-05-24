@@ -1,0 +1,17 @@
+<mat-card-content [ngClass]="'study-card-content'">
+  @if (conditions && conditions.length) {
+    <div [ngClass]="'content-container'">
+      <b> Conditions: </b>
+      <mat-chip-set aria-label="Conditions">
+        @for (condition of conditions; track condition) {
+          <mat-chip highlighted color="primary">{{ condition }}</mat-chip>
+        }
+      </mat-chip-set>
+    </div>
+  }
+  <app-study-card-location-section
+    [url]="url"
+    [locationsAmount]="locationsAmount"
+    [location]="location"
+  />
+</mat-card-content>

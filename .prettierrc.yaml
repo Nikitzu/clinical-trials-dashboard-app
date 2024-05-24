@@ -1,0 +1,23 @@
+arrowParens: 'always'
+bracketSpacing: true
+jsxSingleQuote: true
+printWidth: 90
+semi: true
+singleQuote: true
+tabWidth: 2
+trailingComma: 'none'
+#
+#  const prettierConfig = {
+#arrowParens: 'always',
+#bracketSpacing: true,
+#jsonRecursiveSort: true,
+#printWidth: 90,
+#singleQuote: true,
+#tabWidth: 2,
+#trailingComma: 'none',
+#plugins: [
+#  'prettier-plugin-multiline-arrays',
+#]
+#};
+#
+#  module.exports = prettierConfig;

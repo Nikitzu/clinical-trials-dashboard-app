@@ -1,0 +1,79 @@
+.error-page {
+  position: relative;
+  height: 100vh;
+}
+
+.error-page .error-page-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.error-page-container {
+  max-width: 767px;
+  width: 100%;
+  line-height: 1.4;
+  padding: 0 15px;
+}
+
+.error-page-container .error-page-container-text {
+  position: relative;
+  height: 150px;
+  line-height: 150px;
+  margin-bottom: 25px;
+}
+
+.error-page-container .error-page-container-text h1 {
+  font-family:
+    titillium web,
+    sans-serif;
+  font-size: 186px;
+  font-weight: 900;
+  margin: 0;
+  text-transform: uppercase;
+  background: url(../../../../assets/bgImage.jpeg);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: cover;
+  background-position: center;
+  line-height: 1;
+}
+
+.error-page-container h2 {
+  font-family:
+    titillium web,
+    sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.error-page-container p {
+  font-family: montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.error-page-container a:hover {
+  opacity: 0.8;
+}
+
+.error-page-container button {
+  margin: 1em 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .error-page-container .error-page-container-text {
+    height: 110px;
+    line-height: 110px;
+  }
+
+  .error-page-container .error-page-container-text h1 {
+    font-size: 120px;
+  }
+}

@@ -1,0 +1,25 @@
+<div [ngClass]="'content-container'">
+  <b> Location </b>
+  @if (locationsAmount) {
+    <a
+      mat-button
+      target="_blank"
+      color="primary"
+      href="{{ url + '#contacts-and-locations' }}"
+    >
+      <em> (+{{ locationsAmount }} more) </em>
+    </a>
+  }
+  {{ location?.name ? '' : ': Unspecified' }}
+</div>
+@if (location && location.url) {
+  <iframe
+    width="450"
+    height="250"
+    frameborder="0"
+    style="border: 0"
+    referrerpolicy="no-referrer-when-downgrade"
+    [src]="location.url | safe"
+    allowfullscreen
+  ></iframe>
+}
